@@ -137,9 +137,9 @@ footer a:hover{
 }
 
 .logoImage{
-  /* height:120px;
-  width: 90%; */
+  width: 99%;
   height: 60px;
+  padding-left: 0.8px;
 }
 
 .leaveBtn{
