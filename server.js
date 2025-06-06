@@ -4,6 +4,8 @@ const http = require('http');
 const { Server } = require('socket.io');
 const server = http.createServer(app);
 const io =new Server(server);
+const path = require('path');
+
 
 app.use(express.json());
 app.use(express.static('build'));
