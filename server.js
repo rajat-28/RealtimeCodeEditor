@@ -4,16 +4,14 @@ const http = require('http');
 const { Server } = require('socket.io');
 const server = http.createServer(app);
 const io =new Server(server);
-const path = require('path');
-
 
 app.use(express.json());
 app.use(express.static('build'));
-app.use(express.static(path.join(__dirname, 'build')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+app.use((req,res,next)=>{
+    res.sendFile(path.join(__dirname,'build','index.html'))
+})
+
 const userSocketMap = {};
 
 
