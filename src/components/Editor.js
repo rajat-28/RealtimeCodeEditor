@@ -61,7 +61,7 @@ const Editor = ({socketRef,roomId,onCodeChange}) => {
  
   return (
     <div className="editorContainer">
-                  <img src="/push_run.png" alt="logo"  className="editorWatermark" />
+                  <img src="/PR.png" alt="logo"  className="editorWatermark" />
 
       <textarea ref={textareaRef}></textarea>;
     </div>

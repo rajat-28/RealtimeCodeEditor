@@ -8,14 +8,11 @@ const path = require('path');
 
 
 app.use(express.json());
-// app.use(express.static('build'));
+app.use(express.static('build'));
 
-const buildPath = path.join(__dirname, 'build');
-app.use(express.static(buildPath));
-
-app.get('*', (req, res) => {
-    res.sendFile(path.join(buildPath, 'index.html'));
-});
+app.use((req,res,next)=>{
+    res.sendFile(path.join(__dirname,'build','index.html'))
+})
 
 const userSocketMap = {};
 
