@@ -83,7 +83,7 @@ function EditorPage() {
       <div className="aside">
         <div className="asideInner">
           <div className="logo">
-            <img src="/push_run.png" alt="logo" className="logoImage" />
+            <img src="/pushrun.png" alt="logo" className="logoImage" />
           </div>
           <h3 className="asideHeading">Connected</h3>
           <div className="clientList">
